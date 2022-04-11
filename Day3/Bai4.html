@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Subcription Form</h1>
+  <form action="#" method="post">
+    <fieldset>Personal Information</fieldset>
+    <div>
+
+        <label for="lastname">lastname</label>
+        <input type="text" name="lastname" id="lastname">
+
+        <label for="firstname">firstname</label>
+        <input type="text" name="firstname" id="firstname">
+
+    </div>
+
+    <div class="gender">
+      <label for="">Gender</label><br>
+      <input type="radio" name="gender" id="gender" value="1">
+      <label for="">Male</label>
+      <input type="radio" name="gender" id="gender" value="2">
+      <label for="">Female</label>
+      <?php if (isset($errors) && isset($errors['gender'])) { ?>
+        <p><?php echo $errors['gender']; ?></p>
+      <?php } ?>
+    </div>
+
+    <div>
+      <label for="address">Address</label>
+      <br>
+      <textarea name="address" id="address" cols="30" rows="10"></textarea>
+    </div>
+
+    <div id="magazine">
+      <label for="subcription">magazine subcription</label>
+      <br>
+      <label for="">Hobbies</label><br>
+      <input type="checkbox" name="hobby" value="Badminton" />
+      <input type="checkbox" name="hobby" value="Football" />
+      <input type="checkbox" name="hobby" value="Basketball" />
+    </div>
+    <pre></pre>
+  </form>
+</body>
+</html>
